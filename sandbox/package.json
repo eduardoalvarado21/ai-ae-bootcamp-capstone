@@ -1,0 +1,17 @@
+{
+  "name": "pr-dashboard-sandbox",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "build": "node -e \"console.log('build ok')\"",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "vitest": "^2.1.8"
+  }
+}
