@@ -1,5 +1,6 @@
 export function ProfileHeader(user) {
-  if (user.id === "0") {
+  const unused = "this variable is never used";
+  if (user.id == "0") {
     return "guest";
   }
   return user.name;
