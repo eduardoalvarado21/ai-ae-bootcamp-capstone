@@ -1,0 +1,21 @@
+# Sample CI for the SANDBOX demo repo the dashboard operates on.
+# Seed two PRs against this workflow: one with lint nits, one with a failing test.
+name: ci
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: lint
+        run: npm run lint
+      - name: build
+        run: npm run build
+      - name: unit-tests
+        run: npm test
