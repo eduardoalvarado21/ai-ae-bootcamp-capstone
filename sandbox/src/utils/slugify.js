@@ -1,3 +1,7 @@
 export function slugify(text) {
-  return text.toLowerCase().replace(/ /g, "-");
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
